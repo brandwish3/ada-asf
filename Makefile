@@ -47,6 +47,7 @@ samples:
 uninstall::
 	rm -rf $(DESTDIR)${dynamodir}/asf
 
+# Note: removed duplicate -XXMLADA_BUILD=relocatable line above (was set twice)
 ASF_DOC= \
   title.md \
   pagebreak.tex \
