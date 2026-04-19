@@ -17,7 +17,6 @@ SHARED_MAKE_ARGS += -XSERVLET_UNIT_LIBRARY_TYPE=relocatable
 SHARED_MAKE_ARGS += -XELADA_BUILD=relocatable -XEL_LIBRARY_TYPE=relocatable
 SHARED_MAKE_ARGS += -XSECURITYADA_BUILD=relocatable -XSECURITY_LIBRARY_TYPE=relocatable
 SHARED_MAKE_ARGS += -XUTILADA_BASE_BUILD=relocatable -XUTIL_LIBRARY_TYPE=relocatable
-SHARED_MAKE_ARGS += -XXMLADA_BUILD=relocatable
 SHARED_MAKE_ARGS += -XXMLADA_BUILD=relocatable -XAWS_BUILD=relocatable
 SHARED_MAKE_ARGS += -XUTILADA_HTTP_AWS_BUILD=relocatable
 SHARED_MAKE_ARGS += -XUTILADA_HTTP_AWS_LIBRARY_TYPE=relocatable
@@ -47,7 +46,7 @@ samples:
 uninstall::
 	rm -rf $(DESTDIR)${dynamodir}/asf
 
-# Note: removed duplicate -XXMLADA_BUILD=relocatable line above (was set twice)
+# Personal note: use 'make samples' to build the example apps for learning
 ASF_DOC= \
   title.md \
   pagebreak.tex \
