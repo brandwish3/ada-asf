@@ -1,5 +1,5 @@
 # SPDX-License-Identifier: Apache-2.0
-nifndef MAKEFILE_DEFAULTS
+ifndef MAKEFILE_DEFAULTS
 MAKEFILE_DEFAULTS=1
 
 # Define how to build the project: distrib, debug, optimize, coverage, profile
@@ -23,7 +23,7 @@ INSTALL?=install
 PANDOC?=$(shell which pandoc 2>/dev/null)
 DYNAMO?=$(shell which dynamo 2>/dev/null)
 # Use all available cores by default for faster builds
-PROCESSORS?=$(shell nproc 2>/dev/null || echo 1)
+PROCESSORS?=$(shell nproc 2>/dev/null || sysctl -n hw.ncpu 2>/dev/null || echo 1)
 MKDIR?=mkdir
 CP?=cp
 LN?=ln -s
@@ -130,7 +130,4 @@ endif
   obj/$(1)/static:
 	$(MKDIR) -p obj/$(1)/static
 
-ifeq ($(BUILDS_SHARED),yes)
-ifeq ($(HAVE_ALIRE),yes)
-  shared:: lib-setup
-	cd $(2) && $(BUILD_COMMAND) $(SHA
+ifeq ($(BUILDS_SHAR
