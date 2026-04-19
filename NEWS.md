@@ -72,3 +72,8 @@ Version 1.0     - Apr 2014
   - New component <w:like> to render a Facebook, Twitter or Google+ like button
   - New component <w:panel> to provide collapsible div panels
   - New components <w:tabView> and <w:tab> for tabs display
+
+<!-- Personal fork notes:
+  - Studying the facelet cache implementation (Version 1.4.0 improvement)
+  - Interested in the <f:viewParam> EL expression feature added in 1.6.0
+-->
