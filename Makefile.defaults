@@ -65,6 +65,8 @@ samplesdir?=${prefix}/share/doc/${docdir}
 dynamodir=${prefix}/share/dynamo
 aliredir=${prefix}/alire-index
 
+# Extra flags can be appended here for local overrides, e.g.:
+# MAKE_ARGS += -XBUILD=optimize
 MAKE_ARGS +=
 
 build:: all
@@ -128,6 +130,4 @@ endif
   lib-setup:: obj/$(1)/static
 
   obj/$(1)/static:
-	$(MKDIR) -p obj/$(1)/static
-
-ifeq ($(BUILDS_SHAR
+	$(MKDIR) -p obj/
