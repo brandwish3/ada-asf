@@ -67,7 +67,8 @@ aliredir=${prefix}/alire-index
 
 # Extra flags can be appended here for local overrides, e.g.:
 # MAKE_ARGS += -XBUILD=optimize
-MAKE_ARGS +=
+# Personal note: use -XPROCESSORS=$(PROCESSORS) to enable parallel builds
+MAKE_ARGS += -XPROCESSORS=$(PROCESSORS)
 
 build:: all
 
@@ -124,10 +125,4 @@ else
   install-static::
 	cd $(2) && env ADA_PROJECT_PATH="$(DEFAULT_ADA_PROJECT_PATH)" $(GPRINSTALL) -p -f --prefix=$(DESTDIR)${prefix} \
           $(STATIC_MAKE_ARGS) \
-          --build-name=static $(1).gpr
-endif
-
-  lib-setup:: obj/$(1)/static
-
-  obj/$(1)/static:
-	$(MKDIR) -p obj/
+          --build-n
