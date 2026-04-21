@@ -73,6 +73,5 @@ Version 1.0     - Apr 2014
   - New component <w:panel> to provide collapsible div panels
   - New components <w:tabView> and <w:tab> for tabs display
 
-<!-- Note: forked for personal study. The unclosed comment tag at the bottom
-     of the original file appears to be a typo (<!- instead of <!--). Fixed here.
-     Tracking upstream at stcarrez/ada-asf. -->
+<!-- Note: forked for personal learning/experimentation.
+     Tracking upstream stcarrez/ada-asf for reference. -->
