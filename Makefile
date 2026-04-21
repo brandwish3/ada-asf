@@ -47,6 +47,7 @@ uninstall::
 	rm -rf $(DESTDIR)${dynamodir}/asf
 
 # Personal note: use 'make samples' to build the example apps for learning
+# Personal note: run 'make check 2>&1 | tee build.log' to capture test output for review
 ASF_DOC= \
   title.md \
   pagebreak.tex \
