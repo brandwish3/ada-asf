@@ -69,6 +69,9 @@ aliredir=${prefix}/alire-index
 # MAKE_ARGS += -XBUILD=optimize
 # Personal note: use -XPROCESSORS=$(PROCESSORS) to enable parallel builds
 MAKE_ARGS += -XPROCESSORS=$(PROCESSORS)
+# Personal note: default to optimize build for faster binaries during local testing
+# Switch back to debug when debugging is needed: make BUILD=debug
+BUILD?=optimize
 
 build:: all
 
@@ -123,6 +126,4 @@ else
 	cd $(2) && env ADA_PROJECT_PATH="$(DEFAULT_ADA_PROJECT_PATH)" $(GPRBUILD) -P $(1).gpr $(GPRFLAGS) $(STATIC_MAKE_ARGS)
 
   install-static::
-	cd $(2) && env ADA_PROJECT_PATH="$(DEFAULT_ADA_PROJECT_PATH)" $(GPRINSTALL) -p -f --prefix=$(DESTDIR)${prefix} \
-          $(STATIC_MAKE_ARGS) \
-          --build-n
+	cd $(2) && env ADA_PROJECT_PATH="$(DEFAULT_ADA_PROJECT_PATH)" $
