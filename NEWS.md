@@ -73,7 +73,6 @@ Version 1.0     - Apr 2014
   - New component <w:panel> to provide collapsible div panels
   - New components <w:tabView> and <w:tab> for tabs display
 
-<!-- Personal fork notes:
-  - Studying the facelet cache implementation (Version 1.4.0 improvement)
-  - Interested in the <f:viewParam> EL expression feature added in 1.6.0
--->
+<!-- Note: forked for personal study. The unclosed comment tag at the bottom
+     of the original file appears to be a typo (<!- instead of <!--). Fixed here.
+     Tracking upstream at stcarrez/ada-asf. -->
